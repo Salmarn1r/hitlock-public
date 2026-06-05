@@ -1,0 +1,103 @@
+{
+  "date": "2026-06-05",
+  "model_version": "hitlock-dev",
+  "generated_at": "2026-06-05T22:09:01Z",
+  "picks": [
+    {
+      "rank": 1,
+      "player": "Steven Kwan",
+      "matchup": "CLE vs KC",
+      "prob": 0.875,
+      "tier": "safe",
+      "lock_time": null
+    },
+    {
+      "rank": 2,
+      "player": "Gunnar Henderson",
+      "matchup": "BAL vs TB",
+      "prob": 0.871,
+      "tier": "safe",
+      "lock_time": null
+    },
+    {
+      "rank": 3,
+      "player": "Aaron Judge",
+      "matchup": "NYY vs TOR",
+      "prob": 0.842,
+      "tier": "safe",
+      "lock_time": null
+    },
+    {
+      "rank": 4,
+      "player": "Luis Arraez",
+      "matchup": "SD vs LAD",
+      "prob": 0.84,
+      "tier": "safe",
+      "lock_time": null
+    },
+    {
+      "rank": 5,
+      "player": "Bobby Witt Jr.",
+      "matchup": "KC vs CLE",
+      "prob": 0.823,
+      "tier": "balanced",
+      "lock_time": null
+    },
+    {
+      "rank": 6,
+      "player": "Mookie Betts",
+      "matchup": "LAD vs SD",
+      "prob": 0.82,
+      "tier": "balanced",
+      "lock_time": null
+    },
+    {
+      "rank": 7,
+      "player": "Yandy Diaz",
+      "matchup": "TB vs BOS",
+      "prob": 0.813,
+      "tier": "balanced",
+      "lock_time": null
+    },
+    {
+      "rank": 8,
+      "player": "Freddie Freeman",
+      "matchup": "LAD vs SD",
+      "prob": 0.761,
+      "tier": "aggressive",
+      "lock_time": null
+    },
+    {
+      "rank": 9,
+      "player": "Corey Seager",
+      "matchup": "TEX vs HOU",
+      "prob": 0.728,
+      "tier": "aggressive",
+      "lock_time": null
+    },
+    {
+      "rank": 10,
+      "player": "William Contreras",
+      "matchup": "MIL vs CHC",
+      "prob": 0.713,
+      "tier": "aggressive",
+      "lock_time": null
+    },
+    {
+      "rank": 11,
+      "player": "Marcus Semien",
+      "matchup": "TEX vs HOU",
+      "prob": 0.71,
+      "tier": "aggressive",
+      "lock_time": null
+    },
+    {
+      "rank": 12,
+      "player": "Vlad Guerrero Jr.",
+      "matchup": "TOR vs NYY",
+      "prob": 0.703,
+      "tier": "aggressive",
+      "lock_time": null
+    }
+  ]
+}
