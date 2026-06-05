@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HitLock — Track Record</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c1014;--bg2:#0f151b;--panel:#141b22;--panel2:#19222b;
+    --chalk:#eef2f6;--muted:#8795a4;--faint:#5b6775;--line:rgba(255,255,255,.07);--line2:rgba(255,255,255,.12);
+    --hit:#2fc16b;--miss:#e5484d;--pass:#d6a93a;--pending:#5b6775;--gold:#e8b23a;
+    --shadow:0 18px 40px -18px rgba(0,0,0,.7);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--chalk);font-family:'Barlow',-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+  body{min-height:100vh;padding:40px 22px 70px;
+    background:radial-gradient(900px 460px at 78% -8%,rgba(232,178,58,.10),transparent 60%),
+      radial-gradient(700px 380px at 6% 0%,rgba(47,193,107,.07),transparent 55%),
+      linear-gradient(180deg,var(--bg2),var(--bg));background-attachment:fixed;}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.5;z-index:0;
+    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:44px 44px;-webkit-mask-image:radial-gradient(circle at 50% 30%,#000,transparent 85%);mask-image:radial-gradient(circle at 50% 30%,#000,transparent 85%);}
+  .wrap{max-width:1080px;margin:0 auto;position:relative;z-index:1}
+
+  /* header */
+  header{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;
+    padding-bottom:18px;margin-bottom:30px;border-bottom:1px solid var(--line2)}
+  .brand{display:flex;align-items:center;gap:14px}
+  .logo{width:46px;height:46px;border-radius:11px;flex:none;
+    background:linear-gradient(150deg,#1d2730,#0e151b);border:1px solid var(--line2);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.06),var(--shadow);display:grid;place-items:center}
+  .logo span{font-family:'Bebas Neue';font-size:30px;line-height:1;color:var(--gold);transform:translateY(2px)}
+  .wordmark{font-family:'Bebas Neue';font-size:42px;letter-spacing:1.5px;line-height:.9}
+  .wordmark b{color:var(--gold);font-weight:400}
+  .tag{font-size:12.5px;letter-spacing:.5px;color:var(--muted);margin-top:3px;text-transform:uppercase}
+  .header-right{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+  .source-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:20px;
+    font-family:'Space Mono';font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;
+    border:1px solid var(--line2);color:var(--faint);background:var(--panel)}
+  .source-badge.live{border-color:var(--hit);color:var(--hit);background:rgba(47,193,107,.08)}
+  .source-badge .dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+  .source-badge.live .dot{animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+  .stamp{font-family:'Space Mono';font-size:11px;color:var(--faint);text-align:right;letter-spacing:.5px;line-height:1.7}
+  .stamp b{color:var(--muted)}
+
+  /* KPI */
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:14px}
+  .kpi{background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--line);
+    border-radius:14px;padding:18px 18px 16px;box-shadow:var(--shadow);position:relative;overflow:hidden;
+    opacity:0;transform:translateY(10px);animation:rise .5s cubic-bezier(.2,.7,.2,1) forwards}
+  .kpi:nth-child(1){animation-delay:.04s}.kpi:nth-child(2){animation-delay:.10s}
+  .kpi:nth-child(3){animation-delay:.16s}.kpi:nth-child(4){animation-delay:.22s}
+  @keyframes rise{to{opacity:1;transform:none}}
+  .kpi .lab{font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .kpi .val{font-family:'Bebas Neue';font-size:58px;line-height:.92;margin-top:8px;letter-spacing:1px}
+  .kpi .sub{font-family:'Space Mono';font-size:12px;color:var(--faint);margin-top:4px}
+  .kpi.accent .val{color:var(--gold)}.kpi.hot .val{color:var(--hit)}
+  .kpi .edge{position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);opacity:.85}
+  .kpi.hot .edge{background:var(--hit)}
+
+  /* mini stats */
+  .mini{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:26px}
+  .mcard{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between}
+  .mcard .l{font-size:12.5px;color:var(--muted);letter-spacing:.3px}
+  .mcard .v{font-family:'Space Mono';font-size:20px;font-weight:700}
+  .mcard .v small{font-size:12px;color:var(--faint);font-weight:400}
+
+  /* panels */
+  .panel{background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--line);
+    border-radius:16px;padding:20px 22px;box-shadow:var(--shadow);margin-bottom:22px}
+  .panel h2{font-family:'Bebas Neue';font-size:22px;letter-spacing:1px;font-weight:400;display:flex;align-items:center;gap:10px}
+  .panel h2 .dot{width:7px;height:7px;border-radius:50%;background:var(--gold)}
+  .panel .hint{font-size:12px;color:var(--faint);margin-left:auto;font-family:'Space Mono';letter-spacing:.3px}
+
+  /* scorecard picks */
+  .picks-grid{display:flex;flex-direction:column;gap:8px;margin-top:16px}
+  .pick-row{display:grid;grid-template-columns:32px 1fr auto auto auto;align-items:center;gap:12px;
+    padding:12px 14px;border-radius:10px;background:var(--panel2);border:1px solid var(--line)}
+  .pick-row.safe{border-left:3px solid var(--hit)}
+  .pick-row.balanced{border-left:3px solid var(--gold)}
+  .pick-row.aggressive{border-left:3px solid var(--miss)}
+  .pick-rank{font-family:'Bebas Neue';font-size:24px;color:var(--faint);line-height:1}
+  .pick-rank.top{color:var(--gold)}
+  .pick-name{font-weight:700;font-size:15px}
+  .pick-mu{font-family:'Space Mono';font-size:12px;color:var(--muted)}
+  .pick-prob{font-family:'Bebas Neue';font-size:26px;letter-spacing:.5px}
+  .pick-prob.hi{color:var(--hit)}.pick-prob.mid{color:var(--gold)}.pick-prob.lo{color:var(--muted)}
+  .tier-badge{font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:3px 8px;border-radius:12px}
+  .tier-badge.safe{background:rgba(47,193,107,.15);color:var(--hit)}
+  .tier-badge.balanced{background:rgba(232,178,58,.15);color:var(--gold)}
+  .tier-badge.aggressive{background:rgba(229,72,77,.15);color:var(--miss)}
+  .sc-meta{font-family:'Space Mono';font-size:11px;color:var(--faint);margin-top:12px}
+  .picks-empty{color:var(--faint);font-family:'Space Mono';font-size:13px;padding:12px 0}
+
+  /* chart */
+  svg.streak{width:100%;height:170px;display:block}
+  .strip{display:flex;flex-wrap:wrap;gap:5px;margin-top:18px}
+  .cell{width:15px;height:15px;border-radius:4px;background:var(--panel2);border:1px solid var(--line2)}
+  .cell.hit{background:var(--hit);border-color:transparent}
+  .cell.miss{background:var(--miss);border-color:transparent}
+  .cell.pass{background:var(--pass);border-color:transparent;opacity:.85}
+  .cell.pending{background:var(--panel2);border:1px dashed var(--faint)}
+  .legend{display:flex;gap:18px;margin-top:14px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+  .legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+  .empty{color:var(--faint);font-size:13.5px;font-family:'Space Mono';padding:18px 0 6px}
+
+  /* table */
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th{text-align:left;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);font-weight:600;padding:0 12px 12px;border-bottom:1px solid var(--line2)}
+  th.r,td.r{text-align:right}th.c,td.c{text-align:center}
+  td{padding:13px 12px;border-bottom:1px solid var(--line)}
+  tbody tr:hover{background:rgba(255,255,255,.02)}
+  .pname{font-weight:600}.mu{color:var(--muted);font-family:'Space Mono';font-size:12.5px}
+  .prob{font-family:'Space Mono';color:var(--faint)}.strk{font-family:'Space Mono';font-weight:700}
+  .chip{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase}
+  .chip.hit{background:rgba(47,193,107,.16);color:var(--hit)}
+  .chip.miss{background:rgba(229,72,77,.16);color:var(--miss)}
+  .chip.pass{background:rgba(214,169,58,.16);color:var(--pass)}
+  .chip.pending{background:rgba(91,103,117,.16);color:var(--faint)}
+
+  /* toolbar */
+  .toolbar{display:flex;gap:10px;align-items:center;margin-top:20px;flex-wrap:wrap}
+  .ghost{background:none;border:1px solid var(--line2);color:var(--muted);padding:9px 16px;border-radius:9px;cursor:pointer;font-family:'Barlow';font-size:13px;font-weight:600;transition:.15s}
+  .ghost:hover{color:var(--chalk);border-color:var(--faint)}
+  .ghost.danger:hover{color:var(--miss);border-color:var(--miss)}
+  .spacer{flex:1}
+  .note{font-size:12px;color:var(--faint);margin-top:24px;line-height:1.6;font-family:'Space Mono'}
+  @media(max-width:780px){.kpis{grid-template-columns:repeat(2,1fr)}.mini{grid-template-columns:1fr}
+    .pick-row{grid-template-columns:24px 1fr auto auto}.header-right .stamp{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <div class="logo"><span>HL</span></div>
+      <div>
+        <div class="wordmark">HIT<b>LOCK</b></div>
+        <div class="tag">Beat the Streak · Daily Pick Track Record</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="source-badge" id="sourceBadge"><span class="dot"></span><span id="sourceLabel">Loading...</span></div>
+      <div class="stamp"><b>LIVE LEDGER</b><br><span id="stampDate">—</span></div>
+    </div>
+  </header>
+
+  <!-- KPIs -->
+  <div class="kpis">
+    <div class="kpi accent"><div class="edge"></div><div class="lab">Hit Rate</div><div class="val" id="kHitRate">—</div><div class="sub" id="kHitRateSub">no graded picks</div></div>
+    <div class="kpi hot"><div class="edge"></div><div class="lab">Current Streak</div><div class="val" id="kCurrent">0</div><div class="sub">consecutive hits</div></div>
+    <div class="kpi"><div class="edge"></div><div class="lab">Best Streak</div><div class="val" id="kBest">0</div><div class="sub">season high</div></div>
+    <div class="kpi"><div class="edge"></div><div class="lab">Picks Graded</div><div class="val" id="kGraded">0</div><div class="sub" id="kGradedSub">0 passes · 0 pending</div></div>
+  </div>
+  <div class="mini">
+    <div class="mcard"><span class="l">Last 10 graded</span><span class="v" id="mLast10">—</span></div>
+    <div class="mcard"><span class="l">Last 30 graded</span><span class="v" id="mLast30">—</span></div>
+    <div class="mcard"><span class="l">Calibration (model → actual)</span><span class="v" id="mCalib">—</span></div>
+  </div>
+
+  <!-- Today's Scorecard -->
+  <div class="panel" id="scPanel">
+    <h2><span class="dot"></span> Today's Scorecard <span class="hint" id="scDate">—</span></h2>
+    <div id="scBody"><div class="picks-empty">Fetching today's scorecard...</div></div>
+  </div>
+
+  <!-- Streak chart -->
+  <div class="panel">
+    <h2><span class="dot"></span> Streak Ledger <span class="hint">running streak by gameday</span></h2>
+    <div style="margin-top:14px">
+      <svg class="streak" id="streakSvg" viewBox="0 0 1000 170" preserveAspectRatio="none"></svg>
+      <div class="strip" id="strip"></div>
+      <div class="legend">
+        <span><i style="background:var(--hit)"></i>Hit</span>
+        <span><i style="background:var(--miss)"></i>No Hit</span>
+        <span><i style="background:var(--pass)"></i>Pass</span>
+        <span><i style="background:var(--panel2);border:1px dashed var(--faint)"></i>Pending</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Receipt table -->
+  <div class="panel">
+    <h2><span class="dot"></span> The Receipt</h2>
+    <div style="overflow-x:auto;margin-top:14px">
+      <table>
+        <thead><tr>
+          <th style="width:110px">Date</th><th>Player</th><th>Matchup</th>
+          <th class="r" style="width:80px">P(hit)</th>
+          <th class="c" style="width:100px">Result</th>
+          <th class="r" style="width:70px">Streak</th>
+        </tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <div class="empty" id="tableEmpty">No picks logged yet.</div>
+    </div>
+    <div class="toolbar">
+      <div class="spacer"></div>
+      <button class="ghost" id="refreshBtn">↻ Refresh</button>
+      <button class="ghost" id="csvBtn">Export CSV</button>
+    </div>
+  </div>
+  <div class="note" id="footNote"></div>
+</div>
+
+<script>
+// ── CONFIG ──────────────────────────────────────────────────────────────
+const OWNER         = "Salmarn1r";
+const REPO          = "hitlock-public";
+const BASE          = `https://raw.githubusercontent.com/${OWNER}/${REPO}/main/data`;
+const LEDGER_URL    = `${BASE}/ledger.json`;
+const SCORECARD_URL = `${BASE}/scorecards/latest.json`;
+// ────────────────────────────────────────────────────────────────────────
+
+let entries = [];
+
+// ── LOAD ─────────────────────────────────────────────────────────────────
+async function load() {
+  let source = 'local';
+  try {
+    const bust = `?_=${Date.now()}`;
+    const [lRes, sRes] = await Promise.all([
+      fetch(LEDGER_URL + bust),
+      fetch(SCORECARD_URL + bust)
+    ]);
+    if (lRes.ok) {
+      const ledger = await lRes.json();
+      // Pipeline stores prob as 0..1; tracker displays as 0-100%
+      entries = ledger.map(row => ({
+        id:      row.date,
+        date:    row.date,
+        player:  row.player  || '',
+        matchup: row.matchup || '',
+        prob:    row.prob != null ? (row.prob * 100).toFixed(1) : null,
+        result:  row.result   // 'hit' | 'no_hit' | 'pass' | null (pending)
+      }));
+      source = 'live';
+    }
+    if (sRes.ok) renderScorecard(await sRes.json());
+    else showScEmpty("No scorecard found for today.");
+  } catch(e) {
+    showScEmpty("Could not reach hitlock-public. Check the OWNER/REPO config.");
+  }
+  setSource(source);
+  render();
+}
+
+// ── SCORECARD PANEL ───────────────────────────────────────────────────────
+function renderScorecard(sc) {
+  const d = sc.date ? new Date(sc.date + 'T12:00').toLocaleDateString('en-US', {weekday:'short',month:'short',day:'numeric'}) : '—';
+  document.getElementById('scDate').textContent = d;
+  const picks = sc.picks || [];
+  if (!picks.length) { showScEmpty("No picks in today's scorecard."); return; }
+  document.getElementById('scBody').innerHTML =
+    `<div class="picks-grid">${picks.map(p => {
+      const pct = p.prob != null ? Math.round(p.prob * 100) + '%' : '—';
+      const probCls = p.prob >= .83 ? 'hi' : p.prob >= .77 ? 'mid' : 'lo';
+      const tier = p.tier || 'balanced';
+      return `<div class="pick-row ${tier}">
+        <div class="pick-rank${p.rank===1?' top':''}">${p.rank}</div>
+        <div><div class="pick-name">${p.player}</div><div class="pick-mu">${p.matchup||''}</div></div>
+        <span class="tier-badge ${tier}">${tier}</span>
+        <div class="pick-prob ${probCls}">${pct}</div>
+      </div>`;
+    }).join('')}</div>
+    <div class="sc-meta">Generated ${sc.generated_at ? sc.generated_at.replace('T',' ').slice(0,16) + ' UTC' : '—'} · model ${sc.model_version||'—'}</div>`;
+}
+function showScEmpty(msg) {
+  document.getElementById('scBody').innerHTML = `<div class="picks-empty">${msg}</div>`;
+}
+
+// ── COMPUTE ────────────────────────────────────────────────────────────────
+function sorted() {
+  return [...entries].sort((a,b) => a.date===b.date ? 0 : (a.date<b.date?-1:1));
+}
+function compute() {
+  const s = sorted();
+  let streak=0, best=0, hits=0, miss=0, pass=0, pending=0;
+  const series = [];
+  for (const e of s) {
+    if      (e.result==='hit')    { streak++; hits++; }
+    else if (e.result==='no_hit') { streak=0; miss++; }
+    else if (e.result==='pass')   { pass++; }
+    else                          { pending++; } // null — awaiting grade, hold streak
+    best = Math.max(best, streak);
+    series.push({e, running: streak});
+  }
+  const graded = hits + miss;
+  return {s, series, streak, best, hits, miss, pass, pending, graded,
+    rate: graded ? hits/graded : null};
+}
+function rollingRate(series, n) {
+  const g = series.filter(x => x.e.result==='hit'||x.e.result==='no_hit').slice(-n);
+  if (!g.length) return null;
+  return {pct: g.filter(x=>x.e.result==='hit').length / g.length, h:g.filter(x=>x.e.result==='hit').length, t:g.length};
+}
+function pct(x) { return x==null ? '—' : (x*100).toFixed(1)+'%'; }
+
+// ── RENDER ─────────────────────────────────────────────────────────────────
+function render() {
+  document.getElementById('stampDate').textContent = new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+  const c = compute();
+  document.getElementById('kHitRate').textContent  = c.rate==null ? '—' : pct(c.rate);
+  document.getElementById('kHitRateSub').textContent = c.graded ? `${c.hits} / ${c.graded} graded` : 'no graded picks';
+  document.getElementById('kCurrent').textContent  = c.streak;
+  document.getElementById('kBest').textContent     = c.best;
+  document.getElementById('kGraded').textContent   = c.graded;
+  document.getElementById('kGradedSub').textContent= `${c.pass} pass · ${c.pending} pending`;
+
+  const r10=rollingRate(c.series,10), r30=rollingRate(c.series,30);
+  document.getElementById('mLast10').innerHTML = r10 ? `${pct(r10.pct)} <small>(${r10.h}/${r10.t})</small>` : '—';
+  document.getElementById('mLast30').innerHTML = r30 ? `${pct(r30.pct)} <small>(${r30.h}/${r30.t})</small>` : '—';
+
+  const wp = c.series.filter(x=>x.e.result!=='pass'&&x.e.result!=null&&x.e.prob!=null&&x.e.prob!=='');
+  if (wp.length) {
+    const avgP = wp.reduce((a,x)=>a+Number(x.e.prob),0)/wp.length/100;
+    const act  = wp.filter(x=>x.e.result==='hit').length/wp.length;
+    document.getElementById('mCalib').innerHTML = `${pct(avgP)} <small>→</small> ${pct(act)}`;
+  } else document.getElementById('mCalib').textContent = '—';
+
+  drawChart(c.series); drawStrip(c.series); drawTable(c.series);
+}
+
+function drawChart(series) {
+  const svg=document.getElementById('streakSvg');
+  const W=1000,H=170,padB=22,padT=14;
+  if(series.length<2){svg.innerHTML=`<text x="20" y="95" fill="#5b6775" font-family="Space Mono" font-size="13">Log a couple of picks to see the streak build.</text>`;return;}
+  const maxY=Math.max(5,...series.map(x=>x.running));
+  const n=series.length;
+  const X=i=>n===1?0:(i/(n-1))*(W-10)+5;
+  const Y=v=>H-padB-(v/maxY)*(H-padB-padT);
+  let line='';
+  series.forEach((x,i)=>{const px=X(i),py=Y(x.running);line+=(i?'L':'M')+px.toFixed(1)+' '+py.toFixed(1)+' ';});
+  const area=line+`L ${X(n-1).toFixed(1)} ${H-padB} L ${X(0).toFixed(1)} ${H-padB} Z`;
+  let grid='';
+  for(let g=0;g<=maxY;g+=Math.ceil(maxY/4)){const gy=Y(g);grid+=`<line x1="0" y1="${gy}" x2="${W}" y2="${gy}" stroke="rgba(255,255,255,.06)"/><text x="4" y="${gy-3}" fill="#5b6775" font-family="Space Mono" font-size="10">${g}</text>`;}
+  svg.innerHTML=`<defs><linearGradient id="ga" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8b23a" stop-opacity=".34"/><stop offset="1" stop-color="#e8b23a" stop-opacity="0"/></linearGradient></defs>${grid}<path d="${area}" fill="url(#ga)"/><path d="${line}" fill="none" stroke="#e8b23a" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${X(n-1).toFixed(1)}" cy="${Y(series[n-1].running).toFixed(1)}" r="4.5" fill="#e8b23a" stroke="#0c1014" stroke-width="2"/>`;
+}
+
+function drawStrip(series) {
+  document.getElementById('strip').innerHTML = series.map(x=>{
+    const r=x.e.result;
+    const cls=r==='hit'?'hit':r==='no_hit'?'miss':r==='pass'?'pass':'pending';
+    const lab=r==='hit'?'Hit':r==='no_hit'?'No Hit':r==='pass'?'Pass':'Pending';
+    return `<div class="cell ${cls}" title="${x.e.date} · ${x.e.player||'—'} · ${lab}"></div>`;
+  }).join('');
+}
+
+function drawTable(series) {
+  const tb=document.getElementById('tbody'), empty=document.getElementById('tableEmpty');
+  if(!series.length){tb.innerHTML='';empty.style.display='block';return;}
+  empty.style.display='none';
+  tb.innerHTML=[...series].reverse().map(x=>{
+    const e=x.e, r=e.result;
+    const chip=r==='hit'?'<span class="chip hit">Hit</span>':r==='no_hit'?'<span class="chip miss">No Hit</span>':r==='pass'?'<span class="chip pass">Pass</span>':'<span class="chip pending">Pending</span>';
+    const d=e.date?new Date(e.date+'T12:00').toLocaleDateString('en-US',{month:'short',day:'numeric'}):'—';
+    const probDisplay=e.prob!=null&&e.prob!==''?Number(e.prob).toFixed(0)+'%':'—';
+    return `<tr><td class="mu">${d}</td><td class="pname">${e.player||'—'}</td><td class="mu">${e.matchup||''}</td><td class="r prob">${probDisplay}</td><td class="c">${chip}</td><td class="r strk">${x.running}</td></tr>`;
+  }).join('');
+}
+
+// ── SOURCE BADGE ──────────────────────────────────────────────────────────
+function setSource(src) {
+  const badge=document.getElementById('sourceBadge'), label=document.getElementById('sourceLabel');
+  const note=document.getElementById('footNote');
+  if(src==='live'){
+    badge.className='source-badge live'; label.textContent='Live — hitlock-public';
+    note.textContent=`Reading from github.com/${OWNER}/${REPO}. Refreshes on page load.`;
+  } else {
+    badge.className='source-badge'; label.textContent='Local — no GitHub data';
+    note.textContent=`Could not reach hitlock-public. Check OWNER/REPO in the config, or verify the repo has data committed.`;
+  }
+}
+
+// ── TOOLBAR ───────────────────────────────────────────────────────────────
+document.getElementById('refreshBtn').onclick = () => {
+  document.getElementById('sourceLabel').textContent = 'Loading...';
+  entries = [];
+  document.getElementById('scBody').innerHTML = '<div class="picks-empty">Fetching...</div>';
+  load();
+};
+document.getElementById('csvBtn').onclick = () => {
+  const c=compute();
+  const rows=[['date','player','matchup','model_prob','result','running_streak']];
+  c.series.forEach(x=>rows.push([x.e.date,x.e.player||'',x.e.matchup||'',x.e.prob||'',x.e.result||'pending',x.running]));
+  const csv=rows.map(r=>r.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(',')).join('\n');
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));
+  a.download='hitlock-ledger.csv';a.click();
+};
+
+// ── INIT ──────────────────────────────────────────────────────────────────
+load();
+</script>
+</body>
+</html>
