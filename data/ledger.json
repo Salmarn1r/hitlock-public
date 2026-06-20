@@ -103,5 +103,12 @@
     "matchup": "BAL vs TB",
     "prob": 0.871,
     "result": null
+  },
+  {
+    "date": "2026-06-20",
+    "player": "Marcus Semien",
+    "matchup": "TEX vs HOU",
+    "prob": 0.877,
+    "result": null
   }
 ]
