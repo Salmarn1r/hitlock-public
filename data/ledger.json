@@ -117,5 +117,12 @@
     "matchup": "KC vs CLE",
     "prob": 0.874,
     "result": null
+  },
+  {
+    "date": "2026-06-22",
+    "player": "Bobby Witt Jr.",
+    "matchup": "KC vs CLE",
+    "prob": 0.879,
+    "result": null
   }
 ]
