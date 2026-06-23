@@ -124,5 +124,12 @@
     "matchup": "KC vs CLE",
     "prob": 0.879,
     "result": null
+  },
+  {
+    "date": "2026-06-23",
+    "player": "Corey Seager",
+    "matchup": "TEX vs HOU",
+    "prob": 0.876,
+    "result": null
   }
 ]
