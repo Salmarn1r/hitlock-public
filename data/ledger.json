@@ -145,5 +145,12 @@
     "matchup": "LAD vs SD",
     "prob": 0.873,
     "result": null
+  },
+  {
+    "date": "2026-06-26",
+    "player": "Freddie Freeman",
+    "matchup": "LAD vs SD",
+    "prob": 0.863,
+    "result": null
   }
 ]
