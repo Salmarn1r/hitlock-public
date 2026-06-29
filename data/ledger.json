@@ -166,5 +166,12 @@
     "matchup": "TEX vs HOU",
     "prob": 0.879,
     "result": null
+  },
+  {
+    "date": "2026-06-29",
+    "player": "Mookie Betts",
+    "matchup": "LAD vs SD",
+    "prob": 0.874,
+    "result": null
   }
 ]
