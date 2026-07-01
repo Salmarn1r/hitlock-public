@@ -180,5 +180,12 @@
     "matchup": "TEX vs HOU",
     "prob": 0.865,
     "result": null
+  },
+  {
+    "date": "2026-07-01",
+    "player": "Luis Arraez",
+    "matchup": "SD vs LAD",
+    "prob": 0.846,
+    "result": null
   }
 ]
