@@ -201,5 +201,12 @@
     "matchup": "SD vs LAD",
     "prob": 0.866,
     "result": null
+  },
+  {
+    "date": "2026-07-04",
+    "player": "Corey Seager",
+    "matchup": "TEX vs HOU",
+    "prob": 0.877,
+    "result": null
   }
 ]
