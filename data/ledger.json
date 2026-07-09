@@ -236,5 +236,12 @@
     "matchup": "BAL vs TB",
     "prob": 0.861,
     "result": null
+  },
+  {
+    "date": "2026-07-09",
+    "player": "Freddie Freeman",
+    "matchup": "LAD vs SD",
+    "prob": 0.88,
+    "result": null
   }
 ]
