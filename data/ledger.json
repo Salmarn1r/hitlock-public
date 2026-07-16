@@ -285,5 +285,12 @@
     "matchup": "MIL vs CHC",
     "prob": 0.873,
     "result": null
+  },
+  {
+    "date": "2026-07-16",
+    "player": "Steven Kwan",
+    "matchup": "CLE vs KC",
+    "prob": 0.847,
+    "result": null
   }
 ]
