@@ -313,5 +313,12 @@
     "matchup": "TOR vs NYY",
     "prob": 0.83,
     "result": null
+  },
+  {
+    "date": "2026-07-20",
+    "player": "Yandy Diaz",
+    "matchup": "TB vs BOS",
+    "prob": 0.877,
+    "result": null
   }
 ]
