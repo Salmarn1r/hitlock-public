@@ -320,5 +320,12 @@
     "matchup": "TB vs BOS",
     "prob": 0.877,
     "result": null
+  },
+  {
+    "date": "2026-07-21",
+    "player": "Luis Arraez",
+    "matchup": "SD vs LAD",
+    "prob": 0.868,
+    "result": null
   }
 ]
