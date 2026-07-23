@@ -334,5 +334,12 @@
     "matchup": "LAD vs SD",
     "prob": 0.88,
     "result": null
+  },
+  {
+    "date": "2026-07-23",
+    "player": "Bobby Witt Jr.",
+    "matchup": "KC vs CLE",
+    "prob": 0.869,
+    "result": null
   }
 ]
