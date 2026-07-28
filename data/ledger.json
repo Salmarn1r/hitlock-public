@@ -369,5 +369,12 @@
     "matchup": "TEX vs HOU",
     "prob": 0.87,
     "result": null
+  },
+  {
+    "date": "2026-07-28",
+    "player": "Vlad Guerrero Jr.",
+    "matchup": "TOR vs NYY",
+    "prob": 0.843,
+    "result": null
   }
 ]
