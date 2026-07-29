@@ -376,5 +376,12 @@
     "matchup": "TOR vs NYY",
     "prob": 0.843,
     "result": null
+  },
+  {
+    "date": "2026-07-29",
+    "player": "William Contreras",
+    "matchup": "MIL vs CHC",
+    "prob": 0.862,
+    "result": null
   }
 ]
