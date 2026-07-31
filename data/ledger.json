@@ -390,5 +390,12 @@
     "matchup": "KC vs CLE",
     "prob": 0.874,
     "result": null
+  },
+  {
+    "date": "2026-07-31",
+    "player": "Marcus Semien",
+    "matchup": "TEX vs HOU",
+    "prob": 0.869,
+    "result": null
   }
 ]
