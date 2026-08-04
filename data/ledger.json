@@ -418,5 +418,12 @@
     "matchup": "MIL vs CHC",
     "prob": 0.87,
     "result": null
+  },
+  {
+    "date": "2026-08-04",
+    "player": "Corey Seager",
+    "matchup": "TEX vs HOU",
+    "prob": 0.867,
+    "result": null
   }
 ]
