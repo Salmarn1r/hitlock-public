@@ -432,5 +432,12 @@
     "matchup": "LAD vs SD",
     "prob": 0.87,
     "result": null
+  },
+  {
+    "date": "2026-08-07",
+    "player": "Steven Kwan",
+    "matchup": "CLE vs KC",
+    "prob": 0.872,
+    "result": null
   }
 ]
