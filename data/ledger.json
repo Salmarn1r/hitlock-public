@@ -460,5 +460,12 @@
     "matchup": "TEX vs HOU",
     "prob": 0.876,
     "result": null
+  },
+  {
+    "date": "2026-08-11",
+    "player": "Yandy Diaz",
+    "matchup": "TB vs BOS",
+    "prob": 0.853,
+    "result": null
   }
 ]
