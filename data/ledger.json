@@ -481,5 +481,12 @@
     "matchup": "MIL vs CHC",
     "prob": 0.88,
     "result": null
+  },
+  {
+    "date": "2026-08-14",
+    "player": "Marcus Semien",
+    "matchup": "TEX vs HOU",
+    "prob": 0.878,
+    "result": null
   }
 ]
