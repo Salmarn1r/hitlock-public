@@ -502,5 +502,12 @@
     "matchup": "NYY vs TOR",
     "prob": 0.873,
     "result": null
+  },
+  {
+    "date": "2026-08-17",
+    "player": "Freddie Freeman",
+    "matchup": "LAD vs SD",
+    "prob": 0.868,
+    "result": null
   }
 ]
