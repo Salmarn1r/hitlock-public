@@ -537,5 +537,12 @@
     "matchup": "LAD vs SD",
     "prob": 0.86,
     "result": null
+  },
+  {
+    "date": "2026-08-22",
+    "player": "Vlad Guerrero Jr.",
+    "matchup": "TOR vs NYY",
+    "prob": 0.879,
+    "result": null
   }
 ]
