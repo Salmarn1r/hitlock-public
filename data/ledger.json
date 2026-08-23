@@ -544,5 +544,12 @@
     "matchup": "TOR vs NYY",
     "prob": 0.879,
     "result": null
+  },
+  {
+    "date": "2026-08-23",
+    "player": "Marcus Semien",
+    "matchup": "TEX vs HOU",
+    "prob": 0.867,
+    "result": null
   }
 ]
