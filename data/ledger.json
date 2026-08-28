@@ -572,5 +572,12 @@
     "matchup": "SD vs LAD",
     "prob": 0.878,
     "result": null
+  },
+  {
+    "date": "2026-08-28",
+    "player": "Luis Arraez",
+    "matchup": "SD vs LAD",
+    "prob": 0.876,
+    "result": null
   }
 ]
