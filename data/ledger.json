@@ -600,5 +600,12 @@
     "matchup": "LAD vs SD",
     "prob": 0.872,
     "result": null
+  },
+  {
+    "date": "2026-09-01",
+    "player": "Mookie Betts",
+    "matchup": "LAD vs SD",
+    "prob": 0.878,
+    "result": null
   }
 ]
