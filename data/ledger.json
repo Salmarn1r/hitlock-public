@@ -607,5 +607,12 @@
     "matchup": "LAD vs SD",
     "prob": 0.878,
     "result": null
+  },
+  {
+    "date": "2026-09-02",
+    "player": "Aaron Judge",
+    "matchup": "NYY vs TOR",
+    "prob": 0.876,
+    "result": null
   }
 ]
