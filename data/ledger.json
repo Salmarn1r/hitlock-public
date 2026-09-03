@@ -614,5 +614,12 @@
     "matchup": "NYY vs TOR",
     "prob": 0.876,
     "result": null
+  },
+  {
+    "date": "2026-09-03",
+    "player": "Gunnar Henderson",
+    "matchup": "BAL vs TB",
+    "prob": 0.873,
+    "result": null
   }
 ]
