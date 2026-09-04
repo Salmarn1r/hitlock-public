@@ -621,5 +621,12 @@
     "matchup": "BAL vs TB",
     "prob": 0.873,
     "result": null
+  },
+  {
+    "date": "2026-09-04",
+    "player": "Aaron Judge",
+    "matchup": "NYY vs TOR",
+    "prob": 0.848,
+    "result": null
   }
 ]
