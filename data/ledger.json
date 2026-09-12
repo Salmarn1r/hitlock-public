@@ -677,5 +677,12 @@
     "matchup": "BAL vs TB",
     "prob": 0.865,
     "result": null
+  },
+  {
+    "date": "2026-09-12",
+    "player": "Vlad Guerrero Jr.",
+    "matchup": "TOR vs NYY",
+    "prob": 0.878,
+    "result": null
   }
 ]
