@@ -698,5 +698,12 @@
     "matchup": "CLE vs KC",
     "prob": 0.836,
     "result": null
+  },
+  {
+    "date": "2026-09-15",
+    "player": "Vlad Guerrero Jr.",
+    "matchup": "TOR vs NYY",
+    "prob": 0.876,
+    "result": null
   }
 ]
