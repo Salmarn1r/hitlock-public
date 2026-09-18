@@ -719,5 +719,12 @@
     "matchup": "TEX vs HOU",
     "prob": 0.871,
     "result": null
+  },
+  {
+    "date": "2026-09-18",
+    "player": "Marcus Semien",
+    "matchup": "TEX vs HOU",
+    "prob": 0.863,
+    "result": null
   }
 ]
