@@ -768,5 +768,12 @@
     "matchup": "LAD vs SD",
     "prob": 0.87,
     "result": null
+  },
+  {
+    "date": "2026-09-25",
+    "player": "William Contreras",
+    "matchup": "MIL vs CHC",
+    "prob": 0.878,
+    "result": null
   }
 ]
