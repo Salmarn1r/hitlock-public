@@ -775,5 +775,12 @@
     "matchup": "MIL vs CHC",
     "prob": 0.878,
     "result": null
+  },
+  {
+    "date": "2026-09-26",
+    "player": "Bobby Witt Jr.",
+    "matchup": "KC vs CLE",
+    "prob": 0.844,
+    "result": null
   }
 ]
