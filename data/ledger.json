@@ -782,5 +782,12 @@
     "matchup": "KC vs CLE",
     "prob": 0.844,
     "result": null
+  },
+  {
+    "date": "2026-09-27",
+    "player": "Gunnar Henderson",
+    "matchup": "BAL vs TB",
+    "prob": 0.874,
+    "result": null
   }
 ]
