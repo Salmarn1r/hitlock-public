@@ -810,5 +810,12 @@
     "matchup": "NYY vs TOR",
     "prob": 0.855,
     "result": null
+  },
+  {
+    "date": "2026-10-01",
+    "player": "Aaron Judge",
+    "matchup": "NYY vs TOR",
+    "prob": 0.874,
+    "result": null
   }
 ]
