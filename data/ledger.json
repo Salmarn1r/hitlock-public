@@ -859,5 +859,12 @@
     "matchup": "MIL vs CHC",
     "prob": 0.873,
     "result": null
+  },
+  {
+    "date": "2026-10-09",
+    "player": "William Contreras",
+    "matchup": "MIL vs CHC",
+    "prob": 0.879,
+    "result": null
   }
 ]
