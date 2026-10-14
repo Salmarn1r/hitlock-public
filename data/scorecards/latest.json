@@ -1,101 +1,101 @@
 {
-  "date": "2026-10-13",
+  "date": "2026-10-14",
   "model_version": "hitlock-dev",
-  "generated_at": "2026-10-13T23:22:22Z",
+  "generated_at": "2026-10-14T22:29:58Z",
   "picks": [
     {
       "rank": 1,
-      "player": "Marcus Semien",
-      "matchup": "TEX vs HOU",
-      "prob": 0.878,
+      "player": "Yandy Diaz",
+      "matchup": "TB vs BOS",
+      "prob": 0.85,
       "tier": "safe",
       "lock_time": null
     },
     {
       "rank": 2,
-      "player": "Corey Seager",
-      "matchup": "TEX vs HOU",
-      "prob": 0.853,
+      "player": "William Contreras",
+      "matchup": "MIL vs CHC",
+      "prob": 0.843,
       "tier": "safe",
       "lock_time": null
     },
     {
       "rank": 3,
-      "player": "Steven Kwan",
-      "matchup": "CLE vs KC",
-      "prob": 0.827,
-      "tier": "balanced",
+      "player": "Mookie Betts",
+      "matchup": "LAD vs SD",
+      "prob": 0.836,
+      "tier": "safe",
       "lock_time": null
     },
     {
       "rank": 4,
-      "player": "Freddie Freeman",
-      "matchup": "LAD vs SD",
-      "prob": 0.817,
-      "tier": "balanced",
+      "player": "Bobby Witt Jr.",
+      "matchup": "KC vs CLE",
+      "prob": 0.831,
+      "tier": "safe",
       "lock_time": null
     },
     {
       "rank": 5,
-      "player": "Aaron Judge",
-      "matchup": "NYY vs TOR",
-      "prob": 0.812,
+      "player": "Marcus Semien",
+      "matchup": "TEX vs HOU",
+      "prob": 0.821,
       "tier": "balanced",
       "lock_time": null
     },
     {
       "rank": 6,
-      "player": "Yandy Diaz",
-      "matchup": "TB vs BOS",
-      "prob": 0.807,
+      "player": "Aaron Judge",
+      "matchup": "NYY vs TOR",
+      "prob": 0.818,
       "tier": "balanced",
       "lock_time": null
     },
     {
       "rank": 7,
-      "player": "Gunnar Henderson",
-      "matchup": "BAL vs TB",
-      "prob": 0.8,
+      "player": "Steven Kwan",
+      "matchup": "CLE vs KC",
+      "prob": 0.815,
       "tier": "balanced",
       "lock_time": null
     },
     {
       "rank": 8,
-      "player": "Mookie Betts",
-      "matchup": "LAD vs SD",
-      "prob": 0.777,
+      "player": "Gunnar Henderson",
+      "matchup": "BAL vs TB",
+      "prob": 0.809,
       "tier": "balanced",
       "lock_time": null
     },
     {
       "rank": 9,
-      "player": "Luis Arraez",
-      "matchup": "SD vs LAD",
-      "prob": 0.742,
-      "tier": "aggressive",
+      "player": "Corey Seager",
+      "matchup": "TEX vs HOU",
+      "prob": 0.786,
+      "tier": "balanced",
       "lock_time": null
     },
     {
       "rank": 10,
       "player": "Vlad Guerrero Jr.",
       "matchup": "TOR vs NYY",
-      "prob": 0.739,
-      "tier": "aggressive",
+      "prob": 0.774,
+      "tier": "balanced",
       "lock_time": null
     },
     {
       "rank": 11,
-      "player": "William Contreras",
-      "matchup": "MIL vs CHC",
-      "prob": 0.731,
+      "player": "Luis Arraez",
+      "matchup": "SD vs LAD",
+      "prob": 0.766,
       "tier": "aggressive",
       "lock_time": null
     },
     {
       "rank": 12,
-      "player": "Bobby Witt Jr.",
-      "matchup": "KC vs CLE",
-      "prob": 0.715,
+      "player": "Freddie Freeman",
+      "matchup": "LAD vs SD",
+      "prob": 0.733,
       "tier": "aggressive",
       "lock_time": null
     }
