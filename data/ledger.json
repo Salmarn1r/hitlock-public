@@ -908,5 +908,12 @@
     "matchup": "KC vs CLE",
     "prob": 0.861,
     "result": null
+  },
+  {
+    "date": "2026-10-17",
+    "player": "Luis Arraez",
+    "matchup": "SD vs LAD",
+    "prob": 0.876,
+    "result": null
   }
 ]
