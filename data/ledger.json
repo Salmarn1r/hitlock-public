@@ -922,5 +922,12 @@
     "matchup": "TOR vs NYY",
     "prob": 0.836,
     "result": null
+  },
+  {
+    "date": "2026-10-19",
+    "player": "Corey Seager",
+    "matchup": "TEX vs HOU",
+    "prob": 0.866,
+    "result": null
   }
 ]
