@@ -936,5 +936,12 @@
     "matchup": "CLE vs KC",
     "prob": 0.869,
     "result": null
+  },
+  {
+    "date": "2026-10-21",
+    "player": "Mookie Betts",
+    "matchup": "LAD vs SD",
+    "prob": 0.862,
+    "result": null
   }
 ]
