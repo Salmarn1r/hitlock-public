@@ -950,5 +950,12 @@
     "matchup": "NYY vs TOR",
     "prob": 0.867,
     "result": null
+  },
+  {
+    "date": "2026-10-23",
+    "player": "Steven Kwan",
+    "matchup": "CLE vs KC",
+    "prob": 0.872,
+    "result": null
   }
 ]
