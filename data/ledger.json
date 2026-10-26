@@ -971,5 +971,12 @@
     "matchup": "SD vs LAD",
     "prob": 0.824,
     "result": null
+  },
+  {
+    "date": "2026-10-26",
+    "player": "Yandy Diaz",
+    "matchup": "TB vs BOS",
+    "prob": 0.878,
+    "result": null
   }
 ]
