@@ -992,5 +992,12 @@
     "matchup": "TEX vs HOU",
     "prob": 0.861,
     "result": null
+  },
+  {
+    "date": "2026-10-29",
+    "player": "Bobby Witt Jr.",
+    "matchup": "KC vs CLE",
+    "prob": 0.839,
+    "result": null
   }
 ]
