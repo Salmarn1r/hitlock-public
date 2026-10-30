@@ -999,5 +999,12 @@
     "matchup": "KC vs CLE",
     "prob": 0.839,
     "result": null
+  },
+  {
+    "date": "2026-10-30",
+    "player": "Aaron Judge",
+    "matchup": "NYY vs TOR",
+    "prob": 0.865,
+    "result": null
   }
 ]
