@@ -1013,5 +1013,12 @@
     "matchup": "MIL vs CHC",
     "prob": 0.871,
     "result": null
+  },
+  {
+    "date": "2026-11-01",
+    "player": "Luis Arraez",
+    "matchup": "SD vs LAD",
+    "prob": 0.86,
+    "result": null
   }
 ]
