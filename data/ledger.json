@@ -1069,5 +1069,12 @@
     "matchup": "BAL vs TB",
     "prob": 0.878,
     "result": null
+  },
+  {
+    "date": "2026-11-11",
+    "player": "William Contreras",
+    "matchup": "MIL vs CHC",
+    "prob": 0.856,
+    "result": null
   }
 ]
