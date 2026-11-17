@@ -1104,5 +1104,12 @@
     "matchup": "TEX vs HOU",
     "prob": 0.859,
     "result": null
+  },
+  {
+    "date": "2026-11-17",
+    "player": "Steven Kwan",
+    "matchup": "CLE vs KC",
+    "prob": 0.865,
+    "result": null
   }
 ]
