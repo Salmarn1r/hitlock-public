@@ -1111,5 +1111,12 @@
     "matchup": "CLE vs KC",
     "prob": 0.865,
     "result": null
+  },
+  {
+    "date": "2026-11-18",
+    "player": "Yandy Diaz",
+    "matchup": "TB vs BOS",
+    "prob": 0.855,
+    "result": null
   }
 ]
