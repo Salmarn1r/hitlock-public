@@ -1125,5 +1125,12 @@
     "matchup": "LAD vs SD",
     "prob": 0.878,
     "result": null
+  },
+  {
+    "date": "2026-11-20",
+    "player": "Marcus Semien",
+    "matchup": "TEX vs HOU",
+    "prob": 0.877,
+    "result": null
   }
 ]
