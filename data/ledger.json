@@ -1132,5 +1132,12 @@
     "matchup": "TEX vs HOU",
     "prob": 0.877,
     "result": null
+  },
+  {
+    "date": "2026-11-21",
+    "player": "Gunnar Henderson",
+    "matchup": "BAL vs TB",
+    "prob": 0.878,
+    "result": null
   }
 ]
