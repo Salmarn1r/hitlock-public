@@ -1146,5 +1146,12 @@
     "matchup": "NYY vs TOR",
     "prob": 0.87,
     "result": null
+  },
+  {
+    "date": "2026-11-24",
+    "player": "Mookie Betts",
+    "matchup": "LAD vs SD",
+    "prob": 0.869,
+    "result": null
   }
 ]
